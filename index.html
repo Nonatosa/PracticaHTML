@@ -5,71 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NaVi Architect's</title>
     <link rel="shortcut icon" href="./img/Arq_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
-<header>
+<header class="header">
     <h1>NaVi Architect's</h1>
-    <h2>Buffet de arquitectos</h2>
-    <h3>"Diseñamos espacios donde la luz y la vida se encuentran."</h3>
-    <hr>
+    <nav class="navBar">
+        <a href="#styles">Estilos</a>
+        <a href="#Arquitect-ins">Arquitectos</a>
+        <a href="#Service">Servicios</a>
+        <a href="#Casas">Casas</a>
+    </nav>
 </header>
 
 <body>
-    <section>
-        <h2>Tipos de aquitectura</h2>
-        <ul>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Arquitectura_cl%C3%A1sica" target="_blank">Arquitectura Clásica.</a>
-                <br><img src="./IMG/Acropolis.jpg" alt="Acropolis de Atenas" width="500" title="Imagen de Acropolis">
-            </li>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Arquitectura_g%C3%B3tica" target="_blank">Arquitectura Gótica.</a>
-                <br><img src="./IMG/SAINTE_CHAPELLE.jpg" alt="SAINTE CHAPELLE DE PARIS" width="500" title="Imagen de SAINTE CHAPELLE">
-            </li>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Arquitectura_del_Barroco" target="_blank">Arquitectura Barroca.</a>
-                <br><img src="./IMG/Capilla de la Sorbona.jpg" alt="Capilla de la Sorbona" width="500" title="Imagen de Capilla de la Sorbona">
-            </li>
-        </ul>
+    <section id="styles" class="Estilos section">
+        <div class="description">
+            <h1>Estilos</h1>
+            <p>En <b>NaVi Arquitect</b>, ofrecemos una amplia variedad de estilos arquitectónicos para adaptarnos a tus gustos y necesidades. Desde la elegancia sencilla del <b>minimalismo</b>, que prioriza la funcionalidad y la pureza de las formas, hasta la sofisticación geométrica y detallada del <b>Art Déco</b>, ideal para quienes buscan un toque de glamour y ornamentación estilizada.</p>
+        </div>
+
+        <div class="card-estilo">
+            <section class="row color">
+                <div class="content">
+                    <div class="slider">
+                        <img src="/IMG/Minimalista/Minimalista1.jpg" alt="Imagen 1">
+                        <img src="/IMG/Minimalista/Minimalista2.jpg" alt="Imagen 2">
+                        <img src="/IMG/Minimalista/Minimalista3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="text">
+                        <h1>Minimalismo</h1>
+                        <p>Creamos espacios simples y funcionales, que transmiten calma y claridad. Con líneas limpias, materiales puros y una paleta de colores neutros.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row color">
+                <div class="content">
+                    <div class="slider">
+                        <img src="/IMG/Artdeco/ArtDeco1.jpg" alt="Imagen 1">
+                        <img src="/IMG/Artdeco/ArtDeco2.jpg" alt="Imagen 2">
+                        <img src="/IMG/Artdeco/ArtDeco3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="text">
+                        <h1>Art Déco</h1>
+                        <p>Combinamos elegancia y creatividad con un enfoque en formas geométricas, simetría y detalles ornamentales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row color">
+                <div class="content">
+                    <div class="slider Cottage">
+                        <img src="/IMG/Cottage/Cottage1.jpg" alt="Imagen 1">
+                        <img src="/IMG/Cottage/Cottage2.jpg" alt="Imagen 2">
+                        <img src="/IMG/Cottage/Cottage3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="text">
+                        <h1>Cottage</h1>
+                        <p>Diseñamos espacios llenos de carácter, perfectos para quienes buscan comodidad y una conexión con la naturaleza en su hogar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row color">
+                <div class="content">
+                    <div class="slider">
+                        <img src="/IMG/Mediterraneo/Medi1.jpg" alt="Imagen 1">
+                        <img src="/IMG/Mediterraneo/Medi2.jpg" alt="Imagen 2">
+                        <img src="/IMG/Mediterraneo/Medi3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="text">
+                        <h1>Mediterraneo</h1>
+                        <p>Los espacios luminosos, cálidos y llenos de elegancia rústica, perfectos para disfrutar de una vida relajada y armoniosa.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </section>
+
+    <section id="Arquitect-ins" class="Aquitectos-inspiracion section">
+        <div class="description">
+            <h1>Arquitectos que nos inspiraron</h1>
+            <p>Algunos de nuestros arquitectos favoritos que nos inspiraron durante nuestra carrera fueron <b>Luis Barragán</b>, cuyas obras nos enseñaron a integrar el color, la luz y el espacio de una manera profunda y emocional; <b>Erich Mendelsohn</b>, quien nos mostró la importancia de la innovación y la expresividad en la arquitectura moderna; y <b>Tadao Andō</b>, cuyas creaciones minimalistas y su uso magistral del concreto nos impulsaron a explorar la relación entre la arquitectura y la naturaleza.</p>
+            <p><br>Estos referentes nos motivaron a llevar la arquitectura a la vida de las personas, creando espacios que no solo sean funcionales, sino también emocionales y estéticamente transformadores.</p>
+        </div>
+        
+        <div class="retratos">
+
+            <div class="card">
+                <div class="circle">
+                    <img src="/IMG/Retratos/Luis-Barragan-retrato.jpg" alt="Retrato" class="portrait">
+                </div>
+                <p class="name">Luis Barragán</p>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="/IMG/Retratos/erich-retrato.jpg" alt="Retrato" class="portrait">
+                </div>
+                <p class="name">Erich Mendelsohn</p>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="/IMG/Retratos/Ando-retrato.jpg" alt="Retrato" class="portrait">
+                </div>
+                <p class="name">Tadao Ando</p>
+            </div>
+        </div>
     </section>
     
-
-
-    <section>
-        <h2>Arquitectos favoritos</h2>
-        <p>Son arquitectos que nos marcaron e inspiraron para realizar los trabajos que hacemos.</p>
-        <ol>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Le_Corbusier" target="_blank">Le Corbusier.</a>
-                <br><p>Es considerado uno de los máximos exponentes de la arquitectura moderna y uno de los arquitectos más influyentes del siglo XX.</p>
-            </li>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Frank_Gehry" target="_blank">Frank Gehry.</a>
-                <br><p>Frank Gehry es considerado uno de los mayores representantes de la arquitectura moderna de hoy en día. Sus obras forman parte de los fenómenos arquitectónicos más innovadores y distintos que existen en el mundo.</p>
-            </li>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Renzo_Piano" target="_blank">Renzo Piano.</a>
-                <br><p>Ganador del premio Pritzker, Piano fue uno de los arquitectos fundamentales para dar forma al concepto que hoy conocemos como arquitectura moderna.</p>
-            </li>
-        </ol>
-    </section>
+    <section id="Service" class="servicios section">
+        <div class="description">
+            <h1>Servicios</h1>
+            <p>En <b>NaVi Arquitect</b>, nuestra prioridad es transformar tus ideas en espacios únicos que reflejen tu estilo y necesidades. Tu satisfacción es nuestra mayor inspiración, y estamos comprometidos a entregarte resultados que superen tus expectativas.</p>
+        </div>
     
+        <div class="container-services">
+            <div class="card-services">
+                <div class="image-section">
+                    <img src="/IMG/Servicios/Renderizado.jpg" alt="Descripción de la imagen">
+                </div>
+                <div class="description-section">
+                    <h1>Renderizado</h1>
+                    <p>Creamos imágenes realistas que capturan cada detalle de tu proyecto, ayudándote a visualizar espacios únicos antes de que se hagan realidad.</p>
+                    <a href="#">Cotizar</a>
+                </div>
+            </div>
 
-    <div>
-        <h1>Introduce el servicio deseado</h1>
-        <input type="text" placeholder="Service" >
-        <p>Podemos ayudarte desde el diseño de tu hogar.</p>
-        <p>Hasta la remodelación de tu casa.</p>
-    </div>
+            <div class="card-services">
+                <div class="image-section">
+                    <img src="/IMG/Servicios/Planos.jpg" alt="Descripción de la imagen">
+                </div>
+                <div class="description-section">
+                    <h1>Creación de planos</h1>
+                    <p>Diseñamos planos detallados y precisos que aseguran funcionalidad, estética y cumplimiento de normativas.</p>
+                    <a href="#">Cotizar</a>
+                </div>
+            </div>
 
-    <section>
-        <h2>Noticia destacada</h2>
-        <h3><a href="https://www.archdaily.com/1023060/unam-sculpture-space-integrating-art-and-culture-into-mexicos-natural-landscape" target="_blank"><span style="color: blue;font-weight: bold;">UNAM Sculpture Space: Integrating Art and Culture into Mexico's Natural Landscape </span></a></h3>
-        <a href="https://www.archdaily.com/?ad_name=small-logo" target="_blank">Consulta las noticias mas recientes de arquitectura</a>
+            <div class="card-services">
+                <div class="image-section">
+                    <img src="/IMG/Servicios/Analisis-riesgo.jpg" alt="Descripción de la imagen">
+                </div>
+                <div class="description-section">
+                    <h1>Analisis de riesgos</h1>
+                    <p>Identificamos y evaluamos posibles desafíos en tu proyecto, asegurando seguridad, eficiencia y sostenibilidad en cada etapa.</p>
+                    <a href="#">Cotizar</a>
+                </div>
+            </div>
+
+            <div class="card-services">
+                <div class="image-section">
+                    <img src="/IMG/Servicios/Cotizacion.png" class="Cotizacion" alt="Descripción de la imagen">
+                </div>
+                <div class="description-section">
+                    <h1>Cotización de obras</h1>
+                    <p>Te ofrecemos un presupuesto detallado y ajustado a tus necesidades, optimizando recursos para que tu proyecto sea eficiente y exitoso.</p>
+                    <a href="#">Cotizar</a> 
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2024 NaVi Arquitect - Diseñamos espacios donde la luz y la vida se encuentran.</p>
+    <section id="Casas" class="Noticias section">
+        <div class="description casas">
+            <h1>Casas inspiración</h1>
+        </div>
+
+        <div class="container-houses">
+            <a href="https://www.archdaily.com/1023675/antelope-house-studiokian?ad_source=myad_bookmarks&ad_medium=bookmark-open" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa1.jpg" alt="Casa1">
+                <div class="hover-text">Antelope House</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1023211/steeplechase-house-brooks-plus-scarpa?ad_source=search&ad_medium=projects_tab?ad_source=myad_bookmarks&ad_medium=bookmark-open" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa2.jpg" alt="Casa2">
+                <div class="hover-text">Steeplechase House</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1021962/house-b-t-graux-and-baeyens-architecten?ad_source=search&ad_medium=projects_tab?ad_source=myad_bookmarks&ad_medium=bookmark-open" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa3.jpg" alt="Casa3">
+                <div class="hover-text">House B-T</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1022752/casa-gana-touch-architect?ad_source=search&ad_medium=projects_tab?ad_source=myad_bookmarks&ad_medium=bookmark-open" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa4.jpg" alt="Casa4">
+                <div class="hover-text">Casa Gana</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1011082/terra-house-cite-arquitetura" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa5.jpg" alt="Casa5">
+                <div class="hover-text">Terra House</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1004570/casalema-house-gonzalo-mardones-v-arquitectos" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa6.jpg" alt="Casa6">
+                <div class="hover-text">Casalema House</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1009457/salatino-house-sommet" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa7.jpg" alt="Casa7">
+                <div class="hover-text">Salatino House</div>
+            </a>
+
+            <a href="https://www.archdaily.com/1019095/dove-cottage-agathom-co?ad_source=search&ad_medium=projects_tab?ad_source=myad_bookmarks&ad_medium=bookmark-open" target="_blank" class="card-houses">
+                <img src="/IMG/Casas/Casa8.jpg" alt="Casa8">
+                <div class="hover-text">Dove Cottage</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 NaVi Arquitect - "Diseñamos espacios donde la luz y la vida se encuentran".</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 70px; /* Para compensar la altura del header fijo */
+    background-color: #ddd;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.header {
+    background-color: #686767;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header h1 {
+    font-size: clamp(1.8rem, 4vw, 2rem);
+}
+
+.navBar {
+    display: flex;
+    gap: 15px;
+}
+
+.navBar a {
+    color: #fff; 
+    text-decoration: none; 
+    position: relative; 
+    transition: color 0.2s ease; 
+}
+
+.navBar a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -1px; 
+    width: 100%;
+    height: 2px; 
+    background-color: #b3b3b3; 
+    transform: scaleX(0); 
+    transform-origin: bottom right; 
+    transition: transform 0.2s ease;
+}
+
+/* Al pasar el cursor, el subrayado se expande */
+.navBar a:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+}
+
+/*Cartas de estilos*/
+.card-estilo {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.row {
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.color {
+    background-color: #5b5f5e;
+    color: white;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.row:hover {
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+.text {
+    max-width: 400px;
+    margin: auto;
+    padding: 15px;
+}
+
+.text h1 {
+    font-size: 1.875rem;
+}
+
+.text p {
+    font-size: 1.2rem;
+}
+
+/* Estilos del slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    opacity: 0; /* Imágenes ocultas por defecto */
+    transition: opacity 1s ease; /* Suavidad al aparecer/desaparecer */
+}
+
+/* Mostrar solo la imagen predeterminada inicialmente */
+.slider img:first-child {
+    opacity: 1;
+}
+
+/* Efecto hover: Activar animación del slider */
+.slider:hover img {
+    animation: sliderAnimation 9s infinite; /* 9s: 3 imágenes, cada una tiene 3s */
+}
+
+/* Especificar animación de cada imagen */
+.slider:hover img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slider:hover img:nth-child(2) {
+    animation-delay: 3s; /* Segundo tercio del tiempo total */
+}
+
+.slider:hover img:nth-child(3) {
+    animation-delay: 6s; /* Último tercio del tiempo total */
+}
+
+/* Definición de la animación */
+@keyframes sliderAnimation {
+    0%, 33% {
+        opacity: 1;
+    }
+    34%, 100% {
+        opacity: 0;
+    }
+}
+
+.Cottage {
+    object-position: top;
+}
+
+.retratos {
+    display: flex;
+    gap: 50px;
+    padding: 0px 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: transparent;
+    padding: 0 20px;
+    text-align: center;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.2);
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden; 
+    margin-bottom: 20px;
+}
+
+.portrait {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.description {
+    padding: 75px;
+}
+
+.description h1{
+    text-align: center;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.description p{
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.5rem)
+}
+
+.container-services{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-services {
+    display: flex;
+    width: 850px;
+    height: 400px;
+    border: 2px solid #7a7a7a; 
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde cualquier contenido que sobresalga */
+    background-color: transparent;
+}
+
+.image-section {
+    flex: 1; /* Ocupa el 50% del espacio horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a; /* Color de fondo para la sección de imagen */
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar el espacio sin deformarse */
+}
+
+/* Sección de descripción */
+.description-section {
+    flex: 1; /* Ocupa el 50% del ancho */
+    display: flex;
+    flex-direction: column; /* Alinea los hijos en columna */
+    justify-content: space-between; /* Espacia los elementos (h1, p, a) */
+    background-color: #838383;
+    padding: 20px; /* Espacio interno */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+}
+
+/* Estilo del título (h1) */
+.description-section h1 {
+    margin: 0;
+    font-size: 36px; /* Tamaño del texto */
+    font-weight: bold;
+    text-align: left; /* Alineado a la izquierda */
+}
+
+/* Estilo del párrafo (p) */
+.description-section p {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Estilo del enlace (a) */
+.description-section a {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color del texto */
+    background-color: #838383; /* Color del botón */
+    border: 2px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px;
+    align-self: flex-end; /* Mueve el botón hacia abajo */
+    text-align: center;
+    transition: background-color 0.35s ease;
+}
+
+.description-section a:hover {
+    background-color: #ddd; /* Cambio de color al pasar el mouse */
+    color: #333;
+}
+
+.Cotizacion {
+    object-position: top;
+}
+
+
+.container-houses {
+    display: flex;
+    gap: 75px; /* Espacio entre las tarjetas */
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo de la tarjeta */
+.card-houses {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+/* Imagen dentro de la tarjeta */
+.card-houses img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto hover en la tarjeta */
+.card-houses:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta */
+    outline: 3px solid #fff; /* Crea un borde blanco */
+    outline-offset: 2px; /* Separa el borde de la tarjeta */
+}
+
+.card-houses:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen dentro de la tarjeta */
+}
+
+.casas {
+    padding: 75px 75px 0px 75px;
+}
+
+.hover-text {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.card-houses:hover img{
+    opacity: 0.85;
+}
+
+.card-houses:hover .hover-text{
+    opacity: 1;
+}
