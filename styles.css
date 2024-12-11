@@ -39,7 +39,51 @@ body {
     font-size: clamp(1.8rem, 4vw, 2rem);
 }
 
-.navBar {
+.navBar-fit {
+    display: none;
+}
+
+.menu-button {
+    background-color: #686767; /* Color del botón */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-button:hover {
+    background-color: #686767; /* Cambio de color al pasar el mouse */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #686767; /* Fondo de las opciones */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #969696; /* Efecto de hover sobre las opciones */
+}
+
+.navBar-fit:hover .dropdown-content {
+    display: block; /* Muestra el menú al pasar el mouse por encima */
+}
+
+.navBar ul{
+    list-style: none;
     display: flex;
     gap: 15px;
 }
@@ -48,14 +92,14 @@ body {
     color: #fff; 
     text-decoration: none; 
     position: relative; 
-    transition: color 0.2s ease; 
+    transition: color 0.2s ease;
 }
 
 .navBar a::after {
     content: ''; 
     position: absolute;
     left: 0;
-    bottom: -1px; 
+    bottom: -4px; 
     width: 100%;
     height: 2px; 
     background-color: #b3b3b3; 
@@ -68,6 +112,17 @@ body {
 .navBar a:hover::after {
     transform: scaleX(1); 
     transform-origin: bottom left; 
+}
+
+@media screen and (max-width: 600px) {
+    .navBar {
+        display: none;
+    }
+
+    .navBar-fit {
+        position: relative;
+        display: inline-block;
+    }
 }
 
 /*Cartas de estilos*/
@@ -220,6 +275,7 @@ body {
 
 .description {
     padding: 75px;
+    padding-bottom: 25px;
 }
 
 .description h1{
@@ -403,4 +459,12 @@ body {
 
 .card-houses:hover .hover-text{
     opacity: 1;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem; 
+    color: rgb(133, 133, 133);
 }
