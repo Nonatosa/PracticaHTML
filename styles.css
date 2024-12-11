@@ -241,8 +241,8 @@ body {
 
 .card-services {
     display: flex;
-    width: 850px;
-    height: 400px;
+    width: 50rem;
+    height: 23rem;
     border: 2px solid #7a7a7a; 
     border-radius: 8px; /* Bordes redondeados */
     overflow: hidden; /* Esconde cualquier contenido que sobresalga */
@@ -250,7 +250,7 @@ body {
 }
 
 .image-section {
-    flex: 1; /* Ocupa el 50% del espacio horizontal */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,6 +273,27 @@ body {
     padding: 20px; /* Espacio interno */
     color: #fff; /* Texto blanco */
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .image-section {
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a; /* Color de fondo para la sección de imagen */
+    }
+
+    .card-services {
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        height: 50rem;
+        border: 2px solid #7a7a7a; 
+        border-radius: 8px; /* Bordes redondeados */
+        overflow: hidden; /* Esconde cualquier contenido que sobresalga */
+        background-color: transparent;
+    }
 }
 
 /* Estilo del título (h1) */
